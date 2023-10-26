@@ -14,7 +14,7 @@
   <link href="./styles/globals.css" rel="stylesheet">
   <link href="./styles/styles.css" rel="stylesheet">
 
-  <script src="./scripts/app.js" defer async type="module"></script>
+  <script src="./scripts/app.js" async type="module"></script>
 </head>
 
 <body>
@@ -24,47 +24,49 @@
   <main>
     <div class="flex card" id="email-newsletter">
       <div class="left flex-col flex gap-half-and-one">
-        <h1>
-          <strong>
-            Stay updated!
-          </strong>
-        </h1>
+        <heading class="flex flex-col gap-half-and-one">
+          <h1>
+            <strong>
+              Stay updated!
+            </strong>
+          </h1>
 
-        <div class="description">
-          <p>
-            Join 60,000+ product managers receiving monthly updates on:
-          </p>
+          <div class="description">
+            <p>
+              Join 60,000+ product managers receiving monthly updates on:
+            </p>
 
-          <ul class="checked-list">
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
-                <g fill="none">
-                  <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
-                  <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
-                </g>
-              </svg>
-              Product discovery and building what matters
-            </li>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
-                <g fill="none">
-                  <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
-                  <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
-                </g>
-              </svg>
-              Measuring to ensure updates are a success
-            </li>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
-                <g fill="none">
-                  <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
-                  <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
-                </g>
-              </svg>
-              And much more!
-            </li>
-          </ul>
-        </div>
+            <ul class="checked-list">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+                  <g fill="none">
+                    <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+                    <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
+                  </g>
+                </svg>
+                Product discovery and building what matters
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+                  <g fill="none">
+                    <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+                    <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
+                  </g>
+                </svg>
+                Measuring to ensure updates are a success
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+                  <g fill="none">
+                    <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+                    <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
+                  </g>
+                </svg>
+                And much more!
+              </li>
+            </ul>
+          </div>
+        </heading>
 
         <form id="submit-form">
           <div>
@@ -90,7 +92,7 @@
         </form>
       </div>
 
-      <div id="art-container" aria-label="Brand Art Design">
+      <div id="art-container">
       </div>
     </div>
 
@@ -103,23 +105,24 @@
               <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
             </g>
           </svg>
+          <heading class="flex flex-col gap-half-and-one">
+            <h1>
+              <strong>
+                Thanks for subscribing!
+              </strong>
+            </h1>
 
-          <h1>
-            <strong>
-              Thanks for subscribing!
-            </strong>
-          </h1>
-
-          <p>
-            A confirmation email has been sent to
-            <span id="email-submitted" style="font-weight: 700;"></span>.
-            Please open it and click the button inside to confirm your subscription.
-          </p>
+            <p>
+              A confirmation email has been sent to
+              <span id="email-submitted" style="font-weight: 700;"></span>.
+              Please open it and click the button inside to confirm your subscription.
+            </p>
+          </heading>
         </div>
 
         <div>
           <button type="button" id="dismiss-success-msg" class="gradient__hover primary"
-          style="margin-top: calc(var(--base-font-size) * 2);">
+            style="margin-top: calc(var(--base-font-size) * 2);">
             Dismiss message
           </button>
         </div>
