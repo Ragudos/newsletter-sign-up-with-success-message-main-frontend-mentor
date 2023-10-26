@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+  <link href="./styles/fonts.css" rel="preload" as="style">
+  <link href="./styles/globals.css" rel="stylesheet">
+  <link href="./styles/styles.css" rel="stylesheet">
+
+  <script src="./scripts/app.js" defer async type="module"></script>
+</head>
+
+<body>
+
+  <!-- Sign-up form start -->
+
+  <main>
+    <div class="flex card" id="email-newsletter">
+      <div class="left flex-col flex gap-half-and-one">
+        <h1>
+          <strong>
+            Stay updated!
+          </strong>
+        </h1>
+
+        <div class="description">
+          <p>
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
+
+          <ul class="checked-list">
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+                <g fill="none">
+                  <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+                  <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
+                </g>
+              </svg>
+              Product discovery and building what matters
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+                <g fill="none">
+                  <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+                  <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
+                </g>
+              </svg>
+              Measuring to ensure updates are a success
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+                <g fill="none">
+                  <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+                  <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
+                </g>
+              </svg>
+              And much more!
+            </li>
+          </ul>
+        </div>
+
+        <form id="submit-form">
+          <div>
+            <!-- We can use the data-contains attribute to display a specific error
+              message whilst validating all inputs, then based on the name value
+              of an input, we can append the error message to the label container.
+            -->
+            <div class="label" data-labels="email">
+              <label for="email-input" id="email-input-label">Email address</label>
+            </div>
+
+            <!-- This should have a type of email, but since I don't know how to disable the default behavior
+              where the browser validates the input for us, then we just use type of text.
+            -->
+            <input name="email" class="no-focus-shadow" type="text" placeholder="email@company.com" id="email-input"
+              aria-labelledby="email-input-label" autocomplete="email" required />
+          </div>
+
+
+          <button type="submit" class="gradient__hover primary" id="submit-btn">
+            Subscribe to monthly newsletter
+          </button>
+        </form>
+      </div>
+
+      <div id="art-container" aria-label="Brand Art Design">
+      </div>
+    </div>
+
+    <div class="flex card small" id="success-msg" hidden>
+      <div class="left flex-col flex gap-half-and-one justify-between">
+        <div class="half-min-height-in-mobile gap-half-and-one flex flex-col">
+          <svg xmlns="http://www.w3.org/2000/svg" width="53" height="53" viewBox="0 0 21 21">
+            <g fill="none">
+              <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+              <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
+            </g>
+          </svg>
+
+          <h1>
+            <strong>
+              Thanks for subscribing!
+            </strong>
+          </h1>
+
+          <p>
+            A confirmation email has been sent to
+            <span id="email-submitted" style="font-weight: 700;"></span>.
+            Please open it and click the button inside to confirm your subscription.
+          </p>
+        </div>
+
+        <div>
+          <button type="button" id="dismiss-success-msg" class="gradient__hover primary"
+          style="margin-top: calc(var(--base-font-size) * 2);">
+            Dismiss message
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div style="color: white;" class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Aaron Ragudos</a>.
+  </div>
+</body>
+
+</html>

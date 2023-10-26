@@ -1,0 +1,113 @@
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+main {
+    min-height: 100dvh;
+    display: grid;
+
+    place-items: center;
+
+    padding-block: 32px;
+}
+
+.card {
+    padding: 0;
+
+    background-color: hsl(var(--clr-white));
+
+    box-shadow: 0px 4px 12px hsl(var(--clr-slate-900) / 0.5);
+
+    border-radius: 0;
+
+    flex-direction: column-reverse;
+    gap: calc(var(--base-font-size));
+
+    width: var(--mobile-size);
+    min-height: 80dvh;
+}
+
+.left {
+    padding: calc(var(--base-font-size) * 1.5);
+}
+
+@media only screen and (min-width: 1440px) {
+    .left {
+        padding: calc(var(--base-font-size) * 1.75);
+    }
+
+    .card {
+        border-radius: calc(var(--base-border-radius) * 2);
+        padding: calc(var(--base-font-size) * 1.75);
+
+        flex-direction: row;
+        align-items: center;
+
+        width: auto;
+        min-height: auto;
+    }
+}
+
+.card.small {
+    max-width: var(--mobile-size);
+}
+
+@media only screen and (min-width: 1440px) {
+    .card.small {
+        max-width: 500px;
+    }
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+
+    gap: calc(var(--base-font-size) * 1.25);
+}
+
+.checked-list li {
+    padding-block: 1ex;
+
+    display: flex;
+
+    gap: calc(var(--base-font-size) * 0.75);
+}
+
+.label {
+    font-size: calc(var(--base-font-size) * 0.675);
+    font-weight: 700;
+
+    margin-bottom: calc(4px + 0.5ex);
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.label .error {
+    color: hsl(var(--clr-primary));
+
+    font-size: calc(var(--base-font-size) * 0.75);
+}
+
+form input {
+    width: 100%;
+}
+
+form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: calc(var(--base-font-size) * 1.5);
+}
+
+@media only screen and (min-width: 1440px) {
+    form {
+        gap: calc(var(--base-font-size) * 2);
+    }
+}
