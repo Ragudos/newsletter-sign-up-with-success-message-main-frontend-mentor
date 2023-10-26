@@ -67,6 +67,8 @@ main {
     display: flex;
     flex-direction: column;
 
+    max-width: 400px;
+
     gap: calc(var(--base-font-size) * 1.25);
 }
 
