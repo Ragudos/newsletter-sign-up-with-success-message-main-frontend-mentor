@@ -1,33 +1,3 @@
-import { mobileArt, desktopArt } from "./art.js";
-
-/** Since there's a bug which I don't know
- *  that happens when I place two of the svg arts and
- *  the color tomato on the desktop version disappears, I will just render them conditionally
- */
-
-const isDesktopQuery = window.matchMedia("(min-width: 1440px)");
-
-const artContainer = document.getElementById("art-container");
-
-
-function renderArt(matches) {
-    if (!artContainer) {
-        return;
-    }
-
-    if (matches) {
-        artContainer.innerHTML = desktopArt;
-    } else {
-        artContainer.innerHTML = mobileArt;
-    }
-}
-
-isDesktopQuery.addEventListener("change", (e) => {
-    renderArt(e.matches);
-});
-
-renderArt(isDesktopQuery.matches);
-
 const submitForm = document.getElementById("submit-form");
 const allInput = document.querySelectorAll("#submit-form input");
 const labelContainer = document.querySelectorAll(".label");

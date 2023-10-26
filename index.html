@@ -14,7 +14,7 @@
   <link href="./styles/globals.css" rel="stylesheet">
   <link href="./styles/styles.css" rel="stylesheet">
 
-  <script src="./scripts/app.js" async type="module"></script>
+  <script src="./scripts/app.js" async defer></script>
 </head>
 
 <body>
@@ -90,8 +90,11 @@
         </form>
       </div>
 
-      <div id="art-container">
-      </div>
+      <picture>
+        <source srcset="assets/images/illustration-sign-up-mobile.svg" media="(max-width: 1440px)">
+        <img src="assets/images/illustration-sign-up-desktop.svg" alt="Brand Design"  width="400" height="593"
+          loading="eager" decoding="async" />
+      </picture>
     </div>
 
     <div class="flex card small" id="success-msg" hidden>
@@ -103,23 +106,24 @@
               <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
             </g>
           </svg>
-<heading>
-  <h1>
-    <strong>
-      Thanks for subscribing!
-    </strong>
-  </h1>
+          <heading>
+            <h1>
+              <strong>
+                Thanks for subscribing!
+              </strong>
+            </h1>
 
-  <p>
-    A confirmation email has been sent to
-    <span id="email-submitted" style="font-weight: 700;"></span>.
-    Please open it and click the button inside to confirm your subscription.
-  </p></heading>
+            <p>
+              A confirmation email has been sent to
+              <span id="email-submitted" style="font-weight: 700;"></span>.
+              Please open it and click the button inside to confirm your subscription.
+            </p>
+          </heading>
         </div>
 
         <div>
           <button type="button" id="dismiss-success-msg" class="gradient__hover primary"
-          style="margin-top: calc(var(--base-font-size) * 2);">
+            style="margin-top: calc(var(--base-font-size) * 2);">
             Dismiss message
           </button>
         </div>
@@ -129,7 +133,8 @@
 
   <footer style="color: white;" class="attribution flex flex-col">
     <div>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</div>
-    <div>Coded by <a href="https://youtube.com/@programmers_sanctuary?si=qYbA2dOUIYmXgs1m">Programmer&apos;s Sanctuary</a>.</div>
+    <div>Coded by <a href="https://youtube.com/@programmers_sanctuary?si=qYbA2dOUIYmXgs1m">Programmer&apos;s
+        Sanctuary</a>.</div>
   </footer>
 </body>
 
